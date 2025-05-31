@@ -278,6 +278,28 @@
     overflow: hidden;
     font-family: 'Trajan Pro', serif;
   }
+  .campus-col {
+    position: relative;
+    animation: pulse-border 2s infinite ease-in-out;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  @media (pointer: coarse) {
+    .campus-col {
+      animation: pulse-border 2s infinite ease-in-out;
+    }
+  }
+  @keyframes pulse-border {
+    0% {
+      box-shadow: 0 0 0 0 rgba(176, 91, 59, 0.5);
+    }
+    70% {
+      box-shadow: 0 0 0 15px rgba(176, 91, 59, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(176, 91, 59, 0);
+    }
+  }
   
   .campus-col img {
     width: 100%;

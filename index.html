@@ -155,20 +155,28 @@
     }
   </style>
   <script>
-    // Only run this on devices with coarse (touch) pointers
     if (window.matchMedia('(pointer: coarse)').matches) {
       const beerLayers = document.querySelectorAll('.campus-col .layer');
   
+      // Toggle active on tap
       beerLayers.forEach(layer => {
-        layer.addEventListener('click', () => {
-          // Remove active from others if you want one open at a time
-          beerLayers.forEach(l => {
-            if (l !== layer) l.classList.remove('active');
-          });
+        layer.addEventListener('click', e => {
+          e.stopPropagation(); // Stop it from triggering the body click
+          const isActive = layer.classList.contains('active');
   
-          // Toggle this one
-          layer.classList.toggle('active');
+          // Close all layers
+          beerLayers.forEach(l => l.classList.remove('active'));
+  
+          // Only activate this one if it wasn't already active
+          if (!isActive) {
+            layer.classList.add('active');
+          }
         });
+      });
+  
+      // Close all when tapping elsewhere
+      document.body.addEventListener('click', () => {
+        beerLayers.forEach(layer => layer.classList.remove('active'));
       });
     }
   </script>
