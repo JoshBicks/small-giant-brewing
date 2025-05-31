@@ -154,6 +154,24 @@
       background-color: #565656;
     }
   </style>
+  <script>
+    // Only run this on devices with coarse (touch) pointers
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      const beerLayers = document.querySelectorAll('.campus-col .layer');
+  
+      beerLayers.forEach(layer => {
+        layer.addEventListener('click', () => {
+          // Remove active from others if you want one open at a time
+          beerLayers.forEach(l => {
+            if (l !== layer) l.classList.remove('active');
+          });
+  
+          // Toggle this one
+          layer.classList.toggle('active');
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>
