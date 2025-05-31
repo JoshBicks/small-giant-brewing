@@ -11,37 +11,37 @@
 </head>
 
 <body>
-    
-  <section class="header">
-    <nav>
-      <a href="index.html"><img src="Images/logonobackground.png" alt="Small Giant Logo" /></a>
-      <div class="nav-links" id="navLinks">
-        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
-
-        <ul>
-            <li><a href="index.html" onclick="hideMenu()">HOME</a></li>
-            <li><a href="#campus" onclick="hideMenu()">OUR BEERS</a></li>
-            <li><a href="#about" onclick="hideMenu()">ABOUT US</a></li>
-            <li><a href="#contact" onclick="hideMenu()">CONTACT</a></li>
-        </ul>
-      </div>
-      <script src="bubbles.js"></script>
   <div class="bubble-container" id="bubbles"></div>
-      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-      <style>
-        @media (min-width: 1024px) {
-          .fa-bars {
-            display: none;
-          }
-        }
-      </style>
-    </nav>
-    <div class="text-box">
-        
+  
+  <nav>
+    <a href="index.html"><img src="Images/logonobackground.png" alt="Small Giant Logo" /></a>
+    <div class="nav-links" id="navLinks">
+      <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="index.html" onclick="hideMenu()">HOME</a></li>
+        <li><a href="#campus" onclick="hideMenu()">OUR BEERS</a></li>
+        <li><a href="#about" onclick="hideMenu()">ABOUT US</a></li>
+        <li><a href="#contact" onclick="hideMenu()">CONTACT</a></li>
+      </ul>
+    </div>
+    <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+  </nav>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline id="hero-video">
+      <source src="Videos/beer-pour.mp4" type="video/mp4" />
+    </video>
+
+    <div class="hero-overlay">
       <h1>SMALL GIANT BREWING CO.</h1>
-      <p>A bold, memorable name that blends the humble charm of founder Leo Small with the ambition and heart of a modern craft brewery.</p>
+      <p>Bold beer. Giant flavour. Born in Belfast.</p>
+      <a href="#campus" class="hero-btn">Explore Our Beers</a>
     </div>
   </section>
+
+  <script src="bubbles.js"></script>
+    
+  
 
   <!-- Our Beers Section -->
   <section id="campus" class="campus">
