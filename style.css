@@ -328,6 +328,16 @@
     object-fit: cover;
     z-index: -1;
   }
+  #hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    z-index: -1;
+    background: #F2EADB; /* fallback color if video doesn't cover fully */
+  }
   nav {
     position: absolute;
     top: 0;
