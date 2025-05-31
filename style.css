@@ -358,7 +358,7 @@
     padding: 2rem;
     backdrop-filter: blur(6px);
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 700px;
+   
   }
   
   .hero-overlay h1 {
