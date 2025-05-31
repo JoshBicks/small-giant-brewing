@@ -7,6 +7,7 @@
   <title>Small Giant Brewing Co.</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/f246eab0fb.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
 <body>
@@ -16,6 +17,7 @@
       <a href="index.html"><img src="Images/logonobackground.png" alt="Small Giant Logo" /></a>
       <div class="nav-links" id="navLinks">
         <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+
         <ul>
             <li><a href="index.html" onclick="hideMenu()">HOME</a></li>
             <li><a href="#campus" onclick="hideMenu()">OUR BEERS</a></li>
@@ -26,6 +28,13 @@
       <script src="bubbles.js"></script>
   <div class="bubble-container" id="bubbles"></div>
       <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      <style>
+        @media (min-width: 1024px) {
+          .fa-bars {
+            display: none;
+          }
+        }
+      </style>
     </nav>
     <div class="text-box">
         
