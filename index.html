@@ -11,12 +11,12 @@
 </head>
 
 <body>
-  <div class="bubble-container" id="bubbles"></div>
+  
   
   <nav>
     <a href="index.html"><img src="Images/logonobackground.png" alt="Small Giant Logo" /></a>
     <div class="nav-links" id="navLinks">
-      <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+      <i class="fa-solid fa-xmark" id="close-icon" onclick="hideMenu()"></i>
       <ul>
         <li><a href="index.html" onclick="hideMenu()">HOME</a></li>
         <li><a href="#campus" onclick="hideMenu()">OUR BEERS</a></li>
@@ -24,7 +24,14 @@
         <li><a href="#contact" onclick="hideMenu()">CONTACT</a></li>
       </ul>
     </div>
-    <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    <i class="fa-solid fa-bars" id="menu-icon" onclick="showMenu()"></i>
+    <style>
+      @media (min-width: 768px) {
+        #menu-icon {
+          display: none;
+        }
+      }
+    </style>
   </nav>
 
   <section class="hero">
@@ -38,10 +45,6 @@
       <a href="#campus" class="hero-btn">Explore Our Beers</a>
     </div>
   </section>
-
-  <script src="bubbles.js"></script>
-    
-  
 
   <!-- Our Beers Section -->
   <section id="campus" class="campus">
@@ -132,6 +135,7 @@
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
+    
   </script>
 
   <!-- Back to Top Button Styles -->
@@ -154,6 +158,7 @@
       background-color: #565656;
     }
   </style>
+  
   <script>
     if (window.matchMedia('(pointer: coarse)').matches) {
       const beerLayers = document.querySelectorAll('.campus-col .layer');
@@ -180,6 +185,24 @@
       });
     }
   </script>
+  <script>
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+  
+    function showMenu() {
+      navLinks.style.right = "0";
+      menuIcon.style.display = "none";
+      closeIcon.style.display = "block";
+    }
+  
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+      menuIcon.style.display = "block";
+      closeIcon.style.display = "none";
+    }
+  </script>
+  
+  
 </body>
 
 </html>
