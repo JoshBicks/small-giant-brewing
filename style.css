@@ -499,6 +499,7 @@ a i:hover {
   align-items: center;
   text-align: center;
   padding-bottom: 50px;
+  
 }
 
 .hero-img {
@@ -630,12 +631,14 @@ a i:hover {
     top: 0;
     right: -200px;
     width: 200px;
-    height: 100vh;
+    height: 40vh;
     background: #B05B3B;
     padding-top: 50px;
     transition: right 0.3s ease;
     z-index: 999;
     text-align: left;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.9); /* 👈 Shadow on the left */
+  border-bottom-left-radius: 16px;
   }
   
 
