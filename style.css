@@ -173,10 +173,12 @@ p {
 }
 
 .row {
-  margin: 5%;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 5% auto;
+  max-width: 1200px;
 }
 
 .course-col {
@@ -222,12 +224,29 @@ padding-bottom: 120px;
   border-radius: 10px;
   margin-top: 20px;
 }
-@media(max-width: 700px){
+@media (min-width: 701px) {
   .row {
-      flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
-  
+
+  .campus-col {
+    flex: 1;
+    max-width: 30%;
+  }
 }
+@media (max-width: 700px), (pointer: coarse) {
+  .row {
+    flex-direction: column;
+    
+  }
+
+  .campus-col {
+    max-width: 80%;
+  }
+}
+
 /* Campus Section */
 .campus {
   width: 100%;
@@ -291,7 +310,7 @@ padding-bottom: 120px;
 }
 @media (max-width: 700px), (pointer: coarse) {
   .row {
-    flex-direction: column;
+    
     align-items: center;
   }
 
@@ -473,9 +492,7 @@ a i:hover {
 #backToTop:hover {
   background-color: #565656;
 }
-.row {
-  flex-direction: column;
-}
+
 
 .nav-links ul li {
   display: inline-block;
@@ -637,7 +654,7 @@ a i:hover {
     transition: right 0.3s ease;
     z-index: 999;
     text-align: left;
-    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.9); /* 👈 Shadow on the left */
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.4); /* 👈 Shadow on the left */
   border-bottom-left-radius: 16px;
   }
   
