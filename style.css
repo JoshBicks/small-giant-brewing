@@ -85,6 +85,7 @@ nav img {
   }
 }
 .fa-bars{
+  display: none;
   cursor: pointer;
 }
 
