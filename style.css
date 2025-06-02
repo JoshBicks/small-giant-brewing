@@ -5,16 +5,6 @@
   font-family: 'Poppins', sans-serif;
   resize: none;
 }
-.bubble-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 9999;  /* VERY high to be on top */
-}
 
 
 body {
@@ -236,6 +226,7 @@ padding-bottom: 120px;
   .row {
       flex-direction: column;
   }
+  
 }
 /* Campus Section */
 .campus {
@@ -256,21 +247,47 @@ padding-bottom: 120px;
 }
 
 .campus-col {
-  flex: 1 1 30%;
-  max-width: 30%;
-  border-radius: 50%;
-  overflow: hidden;
   position: relative;
-  text-align: center;
-  margin: 20px auto;
-  font-family: 'Trajan Pro', serif;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.3s ease;
+  background-color: #f2eadb;
+  
 }
 
 .campus-col img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  transition: transform 0.5s ease;
+  flex-shrink: 0;
+}
+
+.info-panel {
+  position: absolute;
+  right: -100%;
+  width: 60%;
+  padding: 20px;
+  background-color: rgba(176, 91, 59, 0.7);
+  height: 100%;
+  transition: right 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #2B2B2B;
+  text-align: center;
+}
+
+.campus-col:hover img {
+  transform: translateX(-60%);
+}
+
+.campus-col:hover .info-panel {
+  right: 0;
 }
 @media (max-width: 700px), (pointer: coarse) {
   .row {
@@ -280,6 +297,7 @@ padding-bottom: 120px;
 
   .campus-col {
     max-width: 90%;
+    
   }
 }
 
