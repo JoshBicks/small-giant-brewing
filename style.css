@@ -246,6 +246,7 @@ h3 {
   text-align: center;
 padding-bottom: 120px;
   font-family: 'Trajan Pro', serif;
+  padding-top: 50px;
 }
 
 .about-content {
@@ -268,6 +269,7 @@ padding-bottom: 120px;
   text-align: center;
   padding-bottom: 80px;
   font-family: 'Trajan Pro', serif;
+  padding-top: 50px;
 }
 
 .campus-col {
@@ -484,20 +486,20 @@ a i:hover {
     height: 100vh;
     overflow: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    padding-bottom: 50px;
   }
   
-  #hero-video {
+  .hero-img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
-    background-color: #000;
   }
   
   .hero-overlay {
@@ -507,6 +509,8 @@ a i:hover {
     backdrop-filter: blur(6px);
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 16px;
+    color: #fff;
+    
   }
   
   .hero-overlay h1 {
@@ -519,6 +523,7 @@ a i:hover {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     font-family: 'Poppins', sans-serif;
+    color: #fff;
   }
   
   .hero-btn {
@@ -537,23 +542,8 @@ a i:hover {
   .hero-btn:hover {
     background: #8a3d24;
   }
-  .hero {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
 
-#hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  background-color: #F2EADB;
-}
+
 
   .nav-links {
     position: fixed;
